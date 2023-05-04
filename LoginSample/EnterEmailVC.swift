@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class EnterEmailVC: UIViewController {
 
@@ -20,6 +21,7 @@ class EnterEmailVC: UIViewController {
         emailTextField.delegate = self
         passwordTextField.delegate = self
         nextButton.layer.cornerRadius = 30
+        errorMessageLabel.isHidden = true
         nextButton.isEnabled = false
         
         emailTextField.becomeFirstResponder() // emailTextField에 자동적으로 커서가 오게 하도록 설정
@@ -35,7 +37,42 @@ class EnterEmailVC: UIViewController {
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
         
+        // 신규 사용자 생성
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            if let error = error {
+                let code = (error as NSError).code
+                switch code {
+                case 17007: // 이미 가입한 계정일 때
+                    self.loginUser(email: email, password: password) // 로그인하기
+
+                default:
+                    self.errorMessageLabel.isHidden = false
+                    self.errorMessageLabel.text = error.localizedDescription
+                }
+            }
+            else {
+                self.showMainViewController()
+            }
+        }
+    }
+    
+    private func loginUser(email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { _, error in
+            if let error = error {
+                self.errorMessageLabel.isHidden = false
+                self.errorMessageLabel.text = error.localizedDescription
+            } else {
+                self.showMainViewController()
+            }
+        }
+    }
+    
+    private func showMainViewController() {
+        guard let vc = storyboard?.instantiateViewController(identifier: "MainVC") else { return }
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
