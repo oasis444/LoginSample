@@ -15,12 +15,14 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         [emailLoginButton, googleLoginButton, appleLoginButton].forEach {
             $0?.layer.borderWidth = 1
             $0?.layer.borderColor = UIColor.white.cgColor
             $0?.layer.cornerRadius = 30
         }
+        navigationController?.navigationBar.tintColor = .white // backButton을 위한 색상 변경
+        navigationItem.backButtonDisplayMode = .minimal
     }
     
     override func viewWillAppear(_ animated: Bool) {

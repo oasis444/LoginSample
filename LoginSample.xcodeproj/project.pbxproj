@@ -16,6 +16,8 @@
 		3343AF522A02516200CE5108 /* LoginSampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343AF512A02516200CE5108 /* LoginSampleUITestsLaunchTests.swift */; };
 		3343AF5F2A02519C00CE5108 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3343AF5E2A02519C00CE5108 /* Main.storyboard */; };
 		3343AF612A02521500CE5108 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343AF602A02521500CE5108 /* LoginVC.swift */; };
+		3343AF632A02C62800CE5108 /* EnterEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343AF622A02C62800CE5108 /* EnterEmailVC.swift */; };
+		3343AF652A037ECA00CE5108 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343AF642A037ECA00CE5108 /* MainVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		3343AF512A02516200CE5108 /* LoginSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3343AF5E2A02519C00CE5108 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3343AF602A02521500CE5108 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		3343AF622A02C62800CE5108 /* EnterEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailVC.swift; sourceTree = "<group>"; };
+		3343AF642A037ECA00CE5108 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				3343AF372A02516100CE5108 /* Assets.xcassets */,
 				3343AF5E2A02519C00CE5108 /* Main.storyboard */,
 				3343AF602A02521500CE5108 /* LoginVC.swift */,
+				3343AF622A02C62800CE5108 /* EnterEmailVC.swift */,
+				3343AF642A037ECA00CE5108 /* MainVC.swift */,
 				3343AF392A02516100CE5108 /* LaunchScreen.storyboard */,
 				3343AF3C2A02516100CE5108 /* Info.plist */,
 			);
@@ -258,6 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3343AF632A02C62800CE5108 /* EnterEmailVC.swift in Sources */,
+				3343AF652A037ECA00CE5108 /* MainVC.swift in Sources */,
 				3343AF2F2A02516100CE5108 /* AppDelegate.swift in Sources */,
 				3343AF312A02516100CE5108 /* SceneDelegate.swift in Sources */,
 				3343AF612A02521500CE5108 /* LoginVC.swift in Sources */,
