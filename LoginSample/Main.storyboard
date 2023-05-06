@@ -80,7 +80,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="googleLoginTapped:" destination="Y1F-I5-1QX" eventType="touchUpInside" id="V9Q-Cd-wgF"/>
+                                            <action selector="googleLoginTapped:" destination="Y1F-I5-1QX" eventType="touchUpInside" id="yA4-8e-hz9"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4l-cl-h7h">
@@ -120,7 +120,7 @@
                     <connections>
                         <outlet property="appleLoginButton" destination="M4l-cl-h7h" id="PUd-uW-Y4c"/>
                         <outlet property="emailLoginButton" destination="C2w-ti-XkD" id="7zJ-a8-Snu"/>
-                        <outlet property="googleLoginButton" destination="9ch-rx-aPX" id="5gO-tD-Kle"/>
+                        <outlet property="googleLoginButton" destination="9ch-rx-aPX" id="HTC-1A-HAN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ju-SO-wnH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -222,13 +222,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="환영합니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TId-4l-JSV">
-                                <rect key="frame" x="139.33333333333334" y="423.66666666666669" width="114.66666666666666" height="30"/>
+                                <rect key="frame" x="10" y="423.66666666666669" width="373" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRX-1x-EtC">
+                                <rect key="frame" x="155.66666666666666" y="473.66666666666669" width="82" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="비밀번호 변경">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetPasswordButtonTapped:" destination="Qo3-wK-CS9" eventType="touchUpInside" id="ArK-im-jcG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJB-12-EX6">
+                                <rect key="frame" x="149" y="523.66666666666663" width="95" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="닉네임 업데이트">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="profileUpdateButtonTapped:" destination="Qo3-wK-CS9" eventType="touchUpInside" id="at9-QN-9Sx"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2A-h7-jUY">
-                                <rect key="frame" x="165" y="473.66666666666669" width="63" height="34"/>
+                                <rect key="frame" x="165" y="573.66666666666663" width="63" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="로그아웃">
@@ -242,13 +262,19 @@
                         <viewLayoutGuide key="safeArea" id="nSQ-Pd-Cvy"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="sRX-1x-EtC" firstAttribute="top" secondItem="TId-4l-JSV" secondAttribute="bottom" constant="20" id="09h-Xf-Oxx"/>
                             <constraint firstItem="TId-4l-JSV" firstAttribute="centerY" secondItem="nSQ-Pd-Cvy" secondAttribute="centerY" id="2RT-c3-lWO"/>
+                            <constraint firstItem="sRX-1x-EtC" firstAttribute="centerX" secondItem="nSQ-Pd-Cvy" secondAttribute="centerX" id="7M2-gm-bfE"/>
+                            <constraint firstItem="q2A-h7-jUY" firstAttribute="top" secondItem="LJB-12-EX6" secondAttribute="bottom" constant="20" id="DuK-DB-pDq"/>
                             <constraint firstItem="TId-4l-JSV" firstAttribute="centerX" secondItem="nSQ-Pd-Cvy" secondAttribute="centerX" id="EKZ-hY-qHR"/>
-                            <constraint firstItem="q2A-h7-jUY" firstAttribute="top" secondItem="TId-4l-JSV" secondAttribute="bottom" constant="20" id="MdT-Mn-xqu"/>
+                            <constraint firstItem="LJB-12-EX6" firstAttribute="centerX" secondItem="nSQ-Pd-Cvy" secondAttribute="centerX" id="Kat-P7-nHx"/>
                             <constraint firstItem="q2A-h7-jUY" firstAttribute="centerX" secondItem="nSQ-Pd-Cvy" secondAttribute="centerX" id="PQj-9Z-U7G"/>
+                            <constraint firstItem="TId-4l-JSV" firstAttribute="leading" secondItem="nSQ-Pd-Cvy" secondAttribute="leading" constant="10" id="hoq-Bw-Lbb"/>
+                            <constraint firstItem="LJB-12-EX6" firstAttribute="top" secondItem="sRX-1x-EtC" secondAttribute="bottom" constant="20" id="r0l-HB-7g4"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="resetPasswordButton" destination="sRX-1x-EtC" id="CKu-Ue-v3u"/>
                         <outlet property="welcomeLabel" destination="TId-4l-JSV" id="RlC-uK-nx0"/>
                     </connections>
                 </viewController>
